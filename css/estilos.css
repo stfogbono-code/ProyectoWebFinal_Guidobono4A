@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+:root{--fondo:#fff;--texto:#161616;--suave:#696969;--acento:#161616;--borde:#e6e6e6;--claro:#f5f5f5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);color:var(--texto);font-family:'DM Sans',Arial,sans-serif;line-height:1.55}
+a{color:var(--texto);text-decoration:none}a:hover{text-decoration:underline}
+.contenedor{width:min(1100px,calc(100% - 48px));margin-left:auto;margin-right:auto}
+.barra{background:#fff;border-bottom:1px solid var(--borde)}
+.barra-interior{min-height:80px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.logo{font-size:25px;font-weight:800;letter-spacing:-1.2px;color:#111;white-space:nowrap}
+.logo span:not(.logo-icono){color:inherit}
+.logo-icono{display:inline-flex;background:#111;color:#fff;width:32px;height:32px;align-items:center;justify-content:center;border-radius:50%;font-size:16px;margin-right:6px}
+.barra nav{display:flex;align-items:center;gap:27px;flex-wrap:wrap}
+.barra nav a{font-size:14px;font-weight:700;color:#222}
+.barra nav .nav-destacado{padding:10px 17px;background:#111;border-radius:25px;color:white}
+.contenido{min-height:calc(100vh - 155px);padding-top:42px;padding-bottom:85px}
+.etiqueta{font-size:11px;font-weight:800;letter-spacing:2.2px;color:#737373;text-transform:uppercase}
+.cabecera{max-width:780px;margin:18px auto 44px;padding:15px 0;text-align:center}
+.cabecera h1{font-size:clamp(33px,4vw,52px);font-weight:800;letter-spacing:-2px;line-height:1.13;margin:12px 0}
+.cabecera p{color:var(--suave);font-size:16px;margin:12px 0 20px}
+.tarjetas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:24px auto 0}
+.tarjetas.dos{grid-template-columns:repeat(2,minmax(0,1fr));max-width:980px}
+.tarjeta,.panel{background:white;border:1px solid var(--borde);border-radius:8px;padding:27px}
+.panel h2{font-size:23px;letter-spacing:-.7px;margin:0 0 18px}
+.panel>p,.tarjeta p{color:var(--suave)}
+.form-centro{width:100%;max-width:470px;margin:45px auto 30px}
+.form-centro .panel{padding:42px 38px;border-radius:10px}
+.panel h1{font-size:36px;letter-spacing:-1.6px;line-height:1.15;margin:12px 0}
+.panel form{margin-top:25px}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:17px}
+input,textarea{font:inherit;width:100%;padding:12px 13px;background:#fff;border:1px solid #d3d3d3;border-radius:5px;margin-top:7px;color:var(--texto)}
+input:focus,textarea:focus{outline:2px solid #bbb;border-color:#222}
+.dos-columnas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.boton{display:inline-block;background:#151515;border:1px solid #151515;border-radius:25px;color:white;padding:12px 24px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit;text-align:center;transition:background .15s}
+.boton:hover{background:#414141;color:white;text-decoration:none}
+.boton.secundario{background:white;color:#151515;border-color:#bcbcbc}
+.boton.secundario:hover{background:#f4f4f4}
+.ancho{width:100%}.nota{font-size:13px;color:var(--suave);margin-top:18px}
+.nota a{font-weight:800;text-decoration:underline}
+.error{background:#fff1f1;border:1px solid #f4caca;color:#9f2424;padding:11px;border-radius:5px;margin:12px 0;font-size:13px}
+.aviso{background:#eff8ef;color:#24642c;border:1px solid #c4e4c9;padding:13px;border-radius:5px;margin-bottom:22px}
+.datos p{padding:12px 0;border-bottom:1px solid var(--borde);margin:0;overflow-wrap:anywhere}
+.acciones{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.buscador{display:flex;gap:10px;margin:15px auto 32px;max-width:750px}
+.buscador input{margin:0;flex:1}
+.tabla-contenedor{background:white;border:1px solid var(--borde);border-radius:8px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:740px}
+th,td{padding:15px;text-align:left;border-bottom:1px solid var(--borde);font-size:13px}
+th{font-size:11px;letter-spacing:1px;color:#777;background:#f8f8f8;text-transform:uppercase}
+.estado{display:inline-block;padding:4px 10px;background:#f0f0f0;color:#333;border-radius:20px;font-weight:700;font-size:11px}
+.acciones-tabla{white-space:nowrap}.acciones-tabla form{display:inline;margin-left:12px}
+.enlace-peligro,.enlace-accion{background:none;border:0;color:#ad3030;cursor:pointer;font:inherit;padding:0}.enlace-accion{color:#222}
+/* Catálogo de productos: recuadros para las imágenes que agregaremos más adelante */
+.autos .auto{padding:0;overflow:hidden;border:0;border-radius:0}
+.auto-imagen{height:255px;background:#f1f1f1;color:#777;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;padding:24px;font-size:11px;font-weight:700;letter-spacing:1.4px;text-align:center}
+.auto-icono{font-size:56px;font-weight:800;color:#d0d0d0;letter-spacing:-3px;line-height:1}
+.auto-info{padding:18px 3px 15px}
+.auto-info h2{margin:6px 0;font-size:19px;letter-spacing:-.4px}
+.auto-info p{font-size:13px;min-height:45px;margin:8px 0;color:var(--suave)}
+.auto-info strong{font-size:19px}
+.pie{border-top:1px solid var(--borde);background:#fff;color:#777;padding:25px 0;text-align:center;font-size:12px}
+hr{border:0;border-top:1px solid var(--borde);margin-top:25px}
+@media(max-width:760px){.contenedor{width:calc(100% - 34px)}.barra-interior{flex-direction:column;padding:17px 0;gap:14px}.barra nav{justify-content:center;gap:15px}.contenido{padding-top:24px}.tarjetas,.tarjetas.dos{grid-template-columns:1fr}.dos-columnas{grid-template-columns:1fr;gap:0}.buscador{flex-direction:column}.cabecera h1{font-size:35px}.form-centro .panel{padding:30px 24px}.auto-imagen{height:280px}}
+
+/* BotinNova - variante negra, compacta y centrada */
+:root{--fondo:#0e0e0e;--texto:#f6f6f6;--suave:#a7a7a7;--acento:#fff;--borde:#303030;--claro:#1a1a1a}
+body{background:var(--fondo);color:var(--texto)}
+a{color:#fff}
+.barra{background:#0e0e0e;border-bottom:1px solid #2c2c2c}
+.logo,.logo span:not(.logo-icono),.barra nav a{color:#fff}
+.logo-icono{background:#fff;color:#111}
+.barra nav .nav-destacado{background:#fff;color:#111}
+.contenedor{width:min(1060px,calc(100% - 44px));margin-left:auto;margin-right:auto}
+.contenido{padding-top:24px;padding-bottom:50px;min-height:calc(100vh - 155px)}
+.cabecera{margin:5px auto 22px;padding:8px 0;max-width:850px}
+.cabecera h1{font-size:clamp(32px,4vw,45px);margin:8px 0}
+.cabecera p{margin:8px 0 12px}
+.etiqueta{color:#aaa}
+.tarjetas{gap:14px;margin-top:16px}
+.tarjetas.dos{max-width:980px}
+.panel,.tarjeta{background:#191919;color:#fff;border:1px solid #303030;border-radius:7px;padding:23px}
+.panel h2{font-size:22px;margin:0 0 14px}
+.panel h1{color:#fff}
+.panel>p,.tarjeta p{color:#aaa}
+.datos p{border-color:#353535;padding:9px 0}
+.boton{background:#fff;border-color:#fff;color:#111;border-radius:5px;padding:10px 18px}
+.boton:hover{background:#ddd;color:#111}
+.boton.secundario{background:transparent;color:#fff;border-color:#696969}
+.boton.secundario:hover{background:#292929;color:#fff}
+input,textarea{background:#111;color:#fff;border-color:#444}
+input:focus,textarea:focus{outline:2px solid #888;border-color:#aaa}
+input::placeholder,textarea::placeholder{color:#999}
+.form-centro{margin:22px auto}
+.form-centro .panel{background:#191919;padding:33px}
+.nota,.cabecera p{color:#aaa}
+.aviso{background:#15271c;color:#d6f0db;border-color:#315b40}
+.error{background:#311d1d;color:#ffcbcb;border-color:#743333}
+.tabla-contenedor{background:#191919;border-color:#303030}
+tr,td,th{border-color:#353535}th{background:#252525;color:#ddd}
+.estado{background:#303030;color:#fff}
+.enlace-accion{color:#fff}
+.enlace-peligro{color:#ff9292}
+.auto-imagen{background:#252525;color:#d2d2d2;height:190px}
+.auto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.auto-icono{color:#5a5a5a}
+.autos .auto{background:#191919;border:1px solid #333;border-radius:7px;overflow:hidden}
+.auto-info{padding:15px 17px}
+.auto-info p{min-height:24px}
+.pie{background:#0e0e0e;color:#aaa;border-color:#303030}
+hr{border-color:#353535}
+.vitrina-titulo{margin:29px 0 8px;font-size:23px;text-align:left}
+.vitrina-nota{color:#aaa;margin:0 0 12px;font-size:14px}
+.vitrina-pie{margin:20px 0 0;text-align:center}
+@media(max-width:760px){.contenido{padding-top:18px}.tarjetas{grid-template-columns:1fr}.auto-imagen{height:210px}.barra-interior{min-height:65px}}
+
+/* Fotos del catálogo */
+.auto-imagen{padding:0;overflow:hidden}
+.foto-botin{width:100%;height:100%;display:block;object-fit:contain;background:#252525}
+.foto-actual{display:block;width:180px;max-width:100%;height:130px;object-fit:contain;background:#252525;border:1px solid #444;border-radius:6px;margin:10px 0}
+input[type=file]{width:100%;padding:12px;margin:8px 0 16px}

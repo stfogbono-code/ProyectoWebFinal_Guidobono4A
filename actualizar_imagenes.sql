@@ -1,0 +1,2 @@
+USE botinnova;
+ALTER TABLE botines ADD COLUMN imagen VARCHAR(255) DEFAULT NULL;
